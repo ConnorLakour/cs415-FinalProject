@@ -1,16 +1,16 @@
 require("./db/mongoose");
 const express = require("express");
 const Book = require("./models/book");
-
+const cors = require("cors")
 const app = express();
+app.use(cors())
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 6600;
 
 app.use(express.json());
 
 //add a book
 app.post("/books", (req, res, next) => {
-  console.log(req.body);
   const book = new Book(req.body);
   book
     .save()
@@ -32,6 +32,7 @@ app.get("/books", (req, res, next) => {
       res.status(500).send();
     });
 });
+
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);

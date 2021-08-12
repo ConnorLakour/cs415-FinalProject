@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Inventory</title>
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+  <div id="container">
+    <div id="mainpic">
+        <!-- <img src="./images/banner1.png" alt=""> -->
+        <!-- <h1>Welcome to City<span class="off"> Library</span></h1> -->
+    </div>
+
+
+    <div id="menu">
+        <ul>
+            <li id="buttonH"><a href="./homepage.html">Home Page</a></li>
+            <li id="buttonA"><a href="./about.html">About</a></li>
+            <li id="buttonVT"><a href="./virtualtourpage.html">Virtual Tour</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Book Inventory </h2>
+        <button onclick="redirect()" type="submit" class="btn" id="addBook">Add New Book</button>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- <th scope="col">ID</th> -->
+              <th scope="col">Title</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Overdue Fee</th>
+              <th scope="col">Publisher</th>
+              <th scope="col">Publish Date</th>
+              <!-- <th scope="col" id="selector">Select</th> -->
+            </tr>
+          </thead>
+          <tbody id="book-list">
+            
+            
+          </tbody>
+        </table>
+        
+        
+       
+  
+</div>
+</body>
+</html>

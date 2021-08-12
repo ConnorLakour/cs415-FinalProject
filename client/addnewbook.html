@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Book</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+
+</head>
+<body>
+  <div class="container" id="book-container">
+    <!-- no need for action and method in form, we use fetch instead -->
+    <form id="addbook">
+      <!-- <div class="state">
+        <label for="title" class="form-label">ID</label>
+        <input type="text" class="form-control" id="title">
+      </div> -->
+      <div id="alert-success">
+        <strong>Success!</strong> 
+      </div>
+      <div class="state">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title">
+      </div>
+      <div class="state">
+        <label for="ISBN" class="form-label">ISBN</label>
+        <input type="string" class="form-control" id="isbn">
+      </div>
+      <div class="state">
+        <label for="overdueFee" class="form-label">Overdue Fee</label>
+        <input type="number" class="form-control" id="overdueFee">
+      </div>
+      <div class="state">
+        <label for="publisher" class="form-label">Publisher</label>
+        <input type="text" class="form-control" id="publisher">
+      </div> 
+      <div class="state">
+        <label for="publishDate" class="form-label">Publish Date</label>
+        <input type="text" class="form-control" id="publishDate">
+      </div>
+
+      <button id="submit">Save Book</button>
+    </form>
+  </div>
+
+</body>
+</html>
