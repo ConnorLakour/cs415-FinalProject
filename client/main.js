@@ -19,21 +19,20 @@ async function fetchBooks() {
 
 //add new book button is cliicked
 function redirect() {
-  
   window.location.href = "addnewbook.html";
-  // document.getElementById("alert-success").style.display = "none"
+  document.getElementById("alert-success").style.display = "block"
+  }
 
-
-  // fs.createReadStream(path.join(__dirname, "addnewbook.html"))
-}
-
-//submit button is clicked
+//add new book button is clicked
 document.getElementById("submit").addEventListener("click", ((e) => {
   e.preventDefault();
   addBook();
 }));
 
 function addBook() {
+  // document.getElementById("alert-success").style.display = "none"
+  html = `visibility: visible`
+  document.getElementById("alert-success").style = html;
   fetch("http://localhost:6600/books", {
     method: "POST",
     headers: {
@@ -48,9 +47,9 @@ function addBook() {
     })
   })
     .then(data =>
-    document.getElementById("alert-success").style.display = "none"
-    )
-    .catch(e => console.log(e));
+       document.getElementById("alert-success").style.display = "block"
+      )
+      .catch(e => console.log(e));
 }
 
 function attachBook(element, book) {

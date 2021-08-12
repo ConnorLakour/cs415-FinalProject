@@ -43,7 +43,9 @@ color:#3A6028;
 	
 }
 
-
+#alert-success{
+	visibility: hidden;
+}
 
 
 #menu
