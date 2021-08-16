@@ -1,7 +1,7 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-const Book = mongoose.model("bookcollection",{
-  title:{
+const bookSchema = new mongoose.Schema({
+  title: {
     type: String,
     requied: true,
     trim: true
@@ -11,7 +11,7 @@ const Book = mongoose.model("bookcollection",{
     required: true,
     trim: true
   },
-  overdueFee:{
+  overdueFee: {
     type: Number,
     required: true,
     trim: true
@@ -26,6 +26,17 @@ const Book = mongoose.model("bookcollection",{
     required: true,
     trim: true
   }
-})
+});
+
+bookSchema.pre("save", async function(next) {
+  const book = this;
+
+  console.log("just before saving")
+
+  next()
+
+});
+
+const Book = mongoose.model("bookcollection", bookSchema);
 
 module.exports = Book;
