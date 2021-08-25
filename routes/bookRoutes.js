@@ -1,8 +1,8 @@
 const express = require("express");
-const userRouter = new express.Router()
+const bookRouter = new express.Router()
 const Book = require("../models/book")
 
-userRouter.post("/books", (req, res, next) => {
+bookRouter.post("/books", (req, res, next) => {
   const book = new Book(req.body);
   book
     .save()
@@ -14,7 +14,7 @@ userRouter.post("/books", (req, res, next) => {
     });
 });
 
-userRouter.get("/books", (req, res, next) => {
+bookRouter.get("/books", (req, res, next) => {
   Book.find({})
     .then(books => {
       res.status(200).send(books);
@@ -23,3 +23,5 @@ userRouter.get("/books", (req, res, next) => {
       res.status(500).send();
     });
 });
+
+module.exports = bookRouter
